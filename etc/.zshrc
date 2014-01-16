@@ -2,7 +2,7 @@
 
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
-zstyle :compinstall filename "/Users/$USER/.zshrc"
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -90,4 +90,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export ECLIPSE_HOME='/software/eclipse/';
 
 # added by travis gem
-[ -f /Users/$USER/.travis/travis.sh ] && source /Users/$USER/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
