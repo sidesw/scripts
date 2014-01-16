@@ -75,6 +75,7 @@ alias gpl='git pull'
 alias gps='git push'
 alias gsh='git stash'
 alias gsp='git stash pop'
+alias gsl='git stash list'
 alias jsl='jsl -process'
 alias ip="ifconfig | grep 'inet ' | awk -F ' ' '{print \$2}'"
 
