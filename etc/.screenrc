@@ -1,0 +1,4 @@
+hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %d/%m/%y"
+startup_message off
+altscreen on
+defscrollback 10000

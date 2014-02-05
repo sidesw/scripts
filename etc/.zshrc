@@ -55,7 +55,7 @@ alias lh='ls -lsh'
 alias zrc='cp -f ~/.zshrc /tmp/.zshrc; vim /tmp/.zshrc; if [ -n "`diff ~/.zshrc /tmp/.zshrc`" ]; then mv /tmp/.zshrc ~/.zshrc; source ~/.zshrc; fi'
 alias x='exit'
 alias eclipse='java -jar /usr/lib/eclipse/startup.jar'
-alias psf='ps -e | grep $1';
+alias psf='ps aux | grep ';
 alias up='cd ..';
 alias grep='grep --color=auto'
 alias frem='free -m'
@@ -71,13 +71,17 @@ alias gd='git diff'
 alias gs='git status'
 alias gk='git checkout'
 alias gr='git reset'
+alias gl='git log'
+alias gdl='git show HEAD^..HEAD'
 alias gpl='git pull'
 alias gps='git push'
 alias gsh='git stash'
 alias gsp='git stash pop'
 alias gsl='git stash list'
+alias ggc='git gc --prune=now'
 alias jsl='jsl -process'
 alias ip="ifconfig | grep 'inet ' | awk -F ' ' '{print \$2}'"
+alias edit='vim'
 
 # CPAN config
 export PERL_LOCAL_LIB_ROOT="/usr/local/perl5";
@@ -89,6 +93,10 @@ export PATH="/usr/local/lib/perl5/bin:$PATH";
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export ECLIPSE_HOME='/software/eclipse/';
+alias eclipse='/software/eclipse/eclipse > /dev/null 2>&1'
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+# npm autocomplete
+[ -f ~/.zsh/.npm_completion ] && source ~/.zsh/.npm_completion
