@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+repoPath=`git rev-parse --show-toplevel`
+repoName=`basename $repoPath`
+if [[ "$1" == "-w" ]]; then
+  git diff --staged --color --word-diff > /tmp/_diff;
+else
+  git diff --staged --color > /tmp/_diff;
+fi
+/usr/local/bin/ansifilter -i /tmp/_diff -H -s 16 -d "$repoName" -o "/bs/local/diffs/$repoName.html"
+rm /tmp/_diff
