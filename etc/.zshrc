@@ -75,8 +75,8 @@ alias gr='git reset'
 alias gl='git log'
 alias gm='git merge'
 alias gdl='git show HEAD^..HEAD'
-alias gpl='git pull'
-alias gps='git push'
+alias gpl="git branch|awk '/^\*/ { print \$2 }'|xargs git pull origin"
+alias gps="git branch|awk '/^\*/ { print \$2 }'|xargs git push origin"
 alias gsh='git stash'
 alias gsp='git stash pop'
 alias gsl='git stash list'
@@ -97,7 +97,7 @@ export PATH="/usr/local/lib/perl5/bin:$PATH";
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export ECLIPSE_HOME='/Software/eclipse/';
-alias eclipse='/Software/eclipse/eclipse > /dev/null 2>&1'
+alias eclipse="$ECLIPSE_HOME/eclipse > /dev/null 2>&1"
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
